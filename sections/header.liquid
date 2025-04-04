@@ -184,6 +184,33 @@
       font-size: 8px !important;
     }
   }
+    /* Policy page container styles */
+  .page-width--narrow {
+    max-width: 1200px !important; /* Increase from default */
+    margin: 0 auto !important;
+    padding: 0 30px !important;
+  }
+
+  /* If there's a specific policy class */
+  .page-width--policy {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 30px !important;
+  }
+
+  /* Target the main policy content area */
+  .rte {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    .page-width--narrow,
+    .page-width--policy,
+    .rte {
+      padding: 0 20px !important;
+    }
+  }
 </style>
 
 <div class="header-container">
