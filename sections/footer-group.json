@@ -38,8 +38,8 @@
         "image_r8mxMW": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/GE-Babylon-Logo-2023.jpg",
-            "image_width": 210,
+            "image": "shopify://shop_images/babylon-text-logo.png",
+            "image_width": 305,
             "alignment": "center"
           }
         },
