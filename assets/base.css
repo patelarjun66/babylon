@@ -3763,3 +3763,6 @@ details-disclosure>details {
     transform: translateX(100%) scaleX(0);
   }
 }
+.shopify-policy__container{
+  width: 100% !important;
+}
