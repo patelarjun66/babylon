@@ -18,21 +18,21 @@
           "type": "link_list",
           "settings": {
             "heading": "<span style=\"text-decoration:underline\">Shop</span>",
-            "menu": ""
+            "menu": "shop-footer-1"
           }
         },
         "footer-0": {
           "type": "link_list",
           "settings": {
             "heading": "<span style=\"text-decoration:underline\">Help</span>",
-            "menu": ""
+            "menu": "help-footer"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
             "heading": "<span style=\"text-decoration:underline\">About Us</span>",
-            "menu": ""
+            "menu": "about-us-footer"
           }
         },
         "image_r8mxMW": {
@@ -47,7 +47,7 @@
           "type": "link_list",
           "settings": {
             "heading": "<span style=\"text-decoration:underline\">Contact Info</span>",
-            "menu": ""
+            "menu": "contact-footer"
           }
         }
       },
