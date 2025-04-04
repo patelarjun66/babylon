@@ -21,6 +21,10 @@ cart-items.is-empty .title-wrapper-with-link,
   padding: 3rem 0 1rem;
 }
 
+.cart-items thead th{
+  font-family: "Review" !important;
+}
+
 .cart__empty-text {
   margin: 4.5rem 0 2rem;
 }
