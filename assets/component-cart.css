@@ -25,7 +25,7 @@ cart-items.is-empty .title-wrapper-with-link,
   font-family: "Review" !important;
 }
 .title-wrapper-with-link, .title{
-  padding-top: 8rem !important;
+  padding-top: 6rem !important;
 }
 .cart__empty-text {
   margin: 4.5rem 0 2rem;
