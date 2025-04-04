@@ -21,7 +21,7 @@ cart-items.is-empty .title-wrapper-with-link,
   padding: 3rem 0 1rem;
 }
 
-.cart-items thead th{
+.cart-items thead th, .cart-item__details, .cart-item__totals, .cart-item__quantity{
   font-family: "Review" !important;
 }
 
