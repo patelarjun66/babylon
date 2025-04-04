@@ -253,6 +253,13 @@
           font-size: 1.6rem;
         }
       }
+      p, .rte p, article p, div p {
+        font-family: 'Review-Light-Trial', sans-serif;
+        /* Add other styles like: */
+        font-size: 16px;
+        line-height: 1.5;
+        color: #000;
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
