@@ -395,6 +395,10 @@ h5,
   word-break: break-word;
 }
 
+shopify-policy__title{
+  padding-top: 8rem !important;
+}
+
 .hxxl {
   font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
   line-height: 1.1;
