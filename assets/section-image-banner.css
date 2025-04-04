@@ -4,7 +4,6 @@
   flex-direction: column;
   z-index: auto;
   isolation: isolate;
-  padding-bottom: 0!important;
 }
 
 .banner__box {
