@@ -73,7 +73,13 @@
   .horizontal-nav a:hover {
     text-decoration: underline !important;
   }
-
+  
+.header-container:has(.menu-toggle.active), .header-logo, img{
+  filter: invert(1) !important;
+}
+  .header-logo, img{
+    filter: invert(0) !important;
+  }
   .fullscreen-nav {
     position: fixed;
     top: 0;
