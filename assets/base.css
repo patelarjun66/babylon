@@ -3765,4 +3765,6 @@ details-disclosure>details {
 }
 .shopify-policy__container{
   width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 30px!important;
 }
