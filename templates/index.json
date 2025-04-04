@@ -34,7 +34,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/babylon-header.jpg",
+        "image": "shopify://shop_images/1H.jpg",
         "overlay_image": "shopify://shop_images/white-babylon-logo.png",
         "container_width": 500,
         "background_color": "#ffffff"
@@ -74,7 +74,7 @@
         "column_tyhaAP": {
           "type": "column",
           "settings": {
-            "title": "WHAT IS BABYLON",
+            "title": "WHAT IS BABYLON ?",
             "text": "<h2>Babylon LA is a Los Angeles-based skate and streetwear brand founded by Lee Spielman and Garrett Stevenson of the hardcore punk band Trash Talk, known for blending punk rock, skateboarding, music, and fashion with a DIY aesthetic and community focus. </h2>",
             "link_label": "",
             "link": ""
