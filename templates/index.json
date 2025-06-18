@@ -34,7 +34,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "spring-summer-25-drop-2",
+        "collection": "shop-all-header",
         "products_to_show": 9,
         "title": "",
         "heading_size": "h2",
