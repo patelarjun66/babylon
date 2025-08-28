@@ -384,5 +384,85 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  </body>
+<!-- Klaviyo ATC START -->
+<script>
+  /* Klaviyo "Added to Cart" for Shopify OS 2.0 (robust inline) */
+  if (!window.__klaviyoATCLoaded) {
+    window.__klaviyoATCLoaded = true;
+    window._learnq = window._learnq || [];
+
+    (function () {
+      var lastFire = 0;
+
+      function trackFromCart() {
+        var now = Date.now();
+        if (now - lastFire < 700) return; // de-dupe rapid repeats
+        lastFire = now;
+
+        fetch("/cart.js", { credentials: "same-origin" })
+          .then(function (r) { return r.json(); })
+          .then(function (cart) {
+            if (!cart || !cart.items || !cart.items.length) return;
+            var item = cart.items[cart.items.length - 1];
+            window._learnq.push(["track", "Added to Cart", {
+              ProductID: item.product_id,
+              SKU: item.sku,
+              Quantity: item.quantity,
+              Price: item.price / 100,   // cents → currency
+              ProductName: item.title,
+              URL: location.href,
+              ImageURL: item.image
+            }]);
+          })
+          .catch(function () {});
+      }
+
+      // 1) Classic product form submits
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("form[action*='/cart/add']").forEach(function (form) {
+          form.addEventListener("submit", function () {
+            setTimeout(trackFromCart, 500);
+          });
+        });
+      });
+
+      // 2) Quick-add buttons / misc triggers
+      document.body.addEventListener("click", function (e) {
+        var btn = e.target.closest(
+          "button[name='add'], button[type='submit'].add-to-cart, " +
+          "button[data-add-to-cart], a[data-add-to-cart]"
+        );
+        var formAdd = e.target.closest("form[action*='/cart/add']");
+        if (btn || formAdd) setTimeout(trackFromCart, 500);
+      });
+
+      // 3) Intercept AJAX adds (fetch & XHR)
+      var _fetch = window.fetch;
+      window.fetch = function () {
+        var url = arguments[0];
+        var p = _fetch.apply(this, arguments);
+        try {
+          var u = (typeof url === "string") ? url : (url && url.url);
+          if (u && /\/cart\/add(\.js)?/.test(u)) p.then(function () { setTimeout(trackFromCart, 400); });
+        } catch (_) {}
+        return p;
+      };
+
+      var _open = XMLHttpRequest.prototype.open;
+      var _send = XMLHttpRequest.prototype.send;
+      XMLHttpRequest.prototype.open = function (method, url) {
+        this.__klaviyo_is_cart_add = url && /\/cart\/add(\.js)?/.test(url);
+        return _open.apply(this, arguments);
+      };
+      XMLHttpRequest.prototype.send = function () {
+        if (this.__klaviyo_is_cart_add) {
+          this.addEventListener("load", function () { setTimeout(trackFromCart, 400); });
+        }
+        return _send.apply(this, arguments);
+      };
+    })();
+  }
+</script>
+<!-- Klaviyo ATC END -->
+</body>
 </html>
