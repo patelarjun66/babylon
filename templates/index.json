@@ -25,7 +25,6 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/BABYLON_SS25_D21.jpg",
         "overlay_image": "shopify://shop_images/white-babylon-logo.png",
         "container_width": 800,
         "background_color": "#ffffff"
