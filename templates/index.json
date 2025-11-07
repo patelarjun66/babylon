@@ -34,7 +34,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "shop-all-header",
+        "collection": "fw25-drop-1",
         "products_to_show": 9,
         "title": "",
         "heading_size": "h2",
